@@ -633,24 +633,6 @@ class App(customtkinter.CTk):
         self.pacecondition = customtkinter.CTkLabel(self.pacecondition_frame, text="Your pacemaker condition analysis will show up here.", wraplength=260)
         self.pacecondition.grid(row = 0, column = 0, padx = (5,5), pady=(5,0))
         
-
-
-
-
-        ##
-        #self.progressbar_1 = customtkinter.CTkProgressBar(self.bottombar_frame)
-        #self.progressbar_1.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-        ##
-
-        #self.progressbar_2 = customtkinter.CTkProgressBar(self.bottombar_frame)
-        #self.progressbar_2.grid(row=2, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-        #self.slider_1 = customtkinter.CTkSlider(self.slider_progressbar_frame, from_=0, to=1, number_of_steps=4)
-        #self.slider_1.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-        #self.slider_2 = customtkinter.CTkSlider(self.slider_progressbar_frame, orientation="vertical")
-        #self.slider_2.grid(row=0, column=1, rowspan=5, padx=(10, 10), pady=(10, 10), sticky="ns")
-        #self.progressbar_3 = customtkinter.CTkProgressBar(self.bottombar_frame, orientation="vertical")
-        #self.progressbar_3.grid(row=0, column=2, rowspan=5, padx=(10, 20), pady=(10, 10), sticky="ns")
-
         # create scrollable frame
         self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="Diet Check-List")
         self.scrollable_frame.grid(row=1, column=2, rowspan = 3, padx=(20, 20), pady=(20, 20), sticky="nsew")
@@ -661,17 +643,6 @@ class App(customtkinter.CTk):
             checkbox.grid(row=i, column=0, padx=10, pady=(0, 20))
             self.scrollable_frame_checkbox.append(checkbox)
 
-        # create checkbox and switch frame
-        #self.checkbox_slider_frame = customtkinter.CTkFrame(self)
-        #self.checkbox_slider_frame.grid(row=1, column=3, padx=(20, 20), pady=(20, 0), sticky="nsew")
-        #self.checkbox_1 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame)
-        #self.checkbox_1.grid(row=1, column=0, pady=(20, 0), padx=20, sticky="n")
-        #self.checkbox_2 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame)
-        #self.checkbox_2.grid(row=2, column=0, pady=(20, 0), padx=20, sticky="n")
-        #self.checkbox_3 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame)
-        #self.checkbox_3.grid(row=3, column=0, pady=20, padx=20, sticky="n")
-
-        #setting user/data inputs
         
 
         # set default values
@@ -709,17 +680,6 @@ class App(customtkinter.CTk):
         self.label_tab_3 = customtkinter.CTkLabel(self.heartinfo.tab("ECG"), text="ECG Graph")
         self.label_tab_3.grid(row=0, column=0, padx=20, pady=20)
         
-        #Heart Analysis
-        #self.analysis = customtkinter.CTkTabview(self.analysis_frame, width=250)
-        #self.analysis.grid(row=0, column=0, padx=(20, 10), pady=(10, 10), sticky="nsew")
-        #self.analysis.add("Heart Condition")
-        #self.analysis.add("Pace Maker Condition")
-        #self.analysis.tab("Heart Condition").grid_columnconfigure(0, weight=1)  
-        #self.analysis.tab("Pace Maker Condition").grid_columnconfigure(0, weight=1)
-        #self.label_tab_2 = customtkinter.CTkLabel(self.analysis.tab("Heart Condition"), text="Heart condition/status goes here")
-        #self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
-        #self.label_tab_3 = customtkinter.CTkLabel(self.analysis.tab("Pace Maker Condition"), text="Pace Maker Batttery goes here")
-        #self.label_tab_3.grid(row=0, column=0, padx=20, pady=20)
 
     def open_input_dialog_event(self):
         dialog = customtkinter.CTkInputDialog( text="Call Emergency Number:", title="Emergency Dial")
